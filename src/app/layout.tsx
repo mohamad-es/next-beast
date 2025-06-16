@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/shared/layout/Header";
 import Footer from "@/components/shared/layout/Footer";
 import { ThemeProvider } from "@/components/shared/theme/theme-provider";
+import QueryProvider from "@/components/wrappers/QueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

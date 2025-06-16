@@ -4,6 +4,7 @@ import { BreadcrumbDemo } from "@/components/ui/breadcrumb/BreadCrumbDemo";
 import { Button } from "@/components/ui/button";
 import { CarouselDemo } from "@/components/ui/carousel/CarouselDemo";
 import { ComboboxDemo } from "@/components/ui/combobox";
+import { InputDemo } from "@/components/ui/input/InputDemo";
 
 const DemoPage = () => {
   const AccordionGrid = () => {
@@ -129,6 +130,15 @@ const DemoPage = () => {
     );
   };
 
+  const FormGrid = () => {
+    return (
+      <div className="border rounded-2xl p-4">
+        <h2 className="text-2xl font-bold mb-5">Form grid</h2>
+        <InputDemo />
+      </div>
+    );
+  };
+
   return (
     <div className="grid grid-cols-3 gap-4 p-10">
       <AccordionGrid />
@@ -139,6 +149,7 @@ const DemoPage = () => {
       <MultipleCarouselGrid />
       <BreadCrumbGrid />
       <ComboboxGrid />
+      <FormGrid />
     </div>
   );
 };
