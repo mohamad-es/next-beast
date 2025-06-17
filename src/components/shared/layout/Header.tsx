@@ -14,8 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center p-10">
-      <ModeToggle />
+    <div className="flex justify-between items-center px-10 mt-10">
       <nav>
         <ul className="flex gap-5">
           {nav.map((item) => (
@@ -25,6 +24,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
+      <ModeToggle />
     </div>
   );
 };
