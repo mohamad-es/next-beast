@@ -1,9 +1,19 @@
-import Image from "next/image";
+import { getQueryClient } from "@/lib/api/get-query-client";
+import { QueryFn } from "@/lib/api/QueryFn";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import UserList from "./UserList";
 
 export default async function Home() {
-  const data = await fetch("https://dummyjson.com/users").then((res) => res.json());
+  const queryClient = getQueryClient();
+
+  await queryClient.prefetchQuery({
+    queryKey: ["user"],
+    queryFn: () => QueryFn({ url: "/api" }),
+  });
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"></div>
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <UserList />
+    </HydrationBoundary>
   );
 }
