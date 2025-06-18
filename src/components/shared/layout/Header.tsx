@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ModeToggle } from "../theme/mode-toggle";
+import { ModeToggle } from "../darkmode/mode-toggle";
 
 const Header = () => {
   const nav = [

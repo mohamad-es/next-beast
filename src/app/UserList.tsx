@@ -1,4 +1,4 @@
-import { QueryFn } from "@/lib/api/QueryFn";
+import { QueryFn } from "@/lib/api/query-fn";
 import React from "react";
 
 const UserList = async () => {

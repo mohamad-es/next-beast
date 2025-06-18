@@ -22,3 +22,4 @@ export async function QueryFn({ url, params }: props) {
     throw error;
   }
 }
+

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/shared/layout/Header";
 import Footer from "@/components/shared/layout/Footer";
-import { ThemeProvider } from "@/components/shared/theme/theme-provider";
-import QueryProvider from "@/lib/api/QueryProvider";
+import { ThemeProvider } from "@/components/shared/darkmode/theme-provider";
+import QueryProvider from "@/lib/api/query-provider";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
