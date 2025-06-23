@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/globals.css";
 import Header from "@/components/shared/layout/Header";
 import Footer from "@/components/shared/layout/Footer";
-import { Toaster } from "@/components/ui/sonner";
 import { Fragment } from "react";
 
 export const metadata: Metadata = {
@@ -19,7 +18,6 @@ export default function RootLayout({
     <Fragment>
       <Header />
       {children}
-      <Toaster position="top-center" richColors />
       <Footer />
     </Fragment>
   );
