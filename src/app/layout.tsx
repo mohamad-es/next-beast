@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Header from "@/components/shared/layout/Header";
-import Footer from "@/components/shared/layout/Footer";
+import "../globals.css";
 import { ThemeProvider } from "@/components/shared/darkmode/theme-provider";
-import QueryProvider from "@/lib/api/query-provider";
+import QueryProvider from "@/api/query-provider";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
@@ -21,10 +19,8 @@ export default function RootLayout({
       <body>
         <QueryProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-            <Header />
             {children}
             <Toaster position="top-center" richColors />
-            <Footer />
           </ThemeProvider>
         </QueryProvider>
       </body>
