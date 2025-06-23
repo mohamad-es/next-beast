@@ -6,7 +6,7 @@ import { BreadcrumbDemo } from "@/components/ui/breadcrumb/BreadCrumbDemo";
 import { Button } from "@/components/ui/button";
 import { CardDemo } from "@/components/ui/card/CardDemo";
 import { CarouselDemo } from "@/components/ui/carousel/CarouselDemo";
-import { ComboboxDemo } from "@/components/ui/combobox";
+import { ComboboxDemo } from "@/components/ui/combobox/ComboboxDemo";
 import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/DropdownMenuDemo";
 import { FormDemo } from "@/components/ui/form/FormDemo";
 import { InputDemo } from "@/components/ui/input/InputDemo";
