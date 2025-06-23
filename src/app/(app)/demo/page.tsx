@@ -1,3 +1,4 @@
+"use client";
 import { AccordionDemo } from "@/components/ui/accordion/AccordionDemo";
 import { AlertDialogDemo } from "@/components/ui/alert-dialog/AlertDialogDemo";
 import { BadgeDemo } from "@/components/ui/badge/BadgeDemo";
@@ -7,13 +8,15 @@ import { CardDemo } from "@/components/ui/card/CardDemo";
 import { CarouselDemo } from "@/components/ui/carousel/CarouselDemo";
 import { ComboboxDemo } from "@/components/ui/combobox";
 import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/DropdownMenuDemo";
-import { FormInput } from "@/components/ui/input/FormInput";
+import { FormDemo } from "@/components/ui/form/FormDemo";
+import { InputDemo } from "@/components/ui/input/InputDemo";
+import { SelectDemo } from "@/components/ui/select/SelectDemo";
 import { TabsDemo } from "@/components/ui/tabs/TabsDemo";
 import { TextareaDemo } from "@/components/ui/textarea/TextareaDemo";
 import { TooltipDemo } from "@/components/ui/tooltip/TooltipDemo";
 
 const DemoPage = () => {
-  const ColorsGrid = () => {
+  const ThemeGrid = () => {
     const radius = [
       {
         className: "rounded-sm",
@@ -69,6 +72,7 @@ const DemoPage = () => {
       <div dir="ltr" className="border rounded-xl p-4">
         <h2 className="text-2xl font-bold mb-5">Theme</h2>
 
+        <h2 className="text-xl mb-2 mt-10">Rounded</h2>
         <div className="flex flex-wrap gap-3 mb-4">
           {radius.map((item) => (
             <div
@@ -80,6 +84,7 @@ const DemoPage = () => {
           ))}
         </div>
 
+        <h2 className="text-xl mb-2 mt-10">Colors</h2>
         <div className="flex flex-wrap gap-3">
           {colors.map((item) => (
             <div
@@ -226,14 +231,20 @@ const DemoPage = () => {
     );
   };
 
-  const FormGrid = () => {
+  const InpuGrid = () => {
     return (
       <div className="border rounded-xl p-4">
-        <h2 className="text-2xl font-bold mb-5">Form </h2>
-        <FormInput />
-        <div className="mt-2">
-          <TextareaDemo />
-        </div>
+        <h2 className="text-2xl font-bold mb-5">Input</h2>
+        <InputDemo />
+      </div>
+    );
+  };
+
+  const TextareaGrid = () => {
+    return (
+      <div className="border rounded-xl p-4">
+        <h2 className="text-2xl font-bold mb-5">Textarea</h2>
+        <TextareaDemo />
       </div>
     );
   };
@@ -266,24 +277,41 @@ const DemoPage = () => {
     </div>
   );
 
+  const FormGrid = () => (
+    <div className="border rounded-xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Form</h2>
+      <FormDemo />
+    </div>
+  );
+
+  const SelectGrid = () => (
+    <div className="border rounded-xl p-4">
+      <h2 className="text-2xl font-bold mb-5">Select</h2>
+      <SelectDemo />
+    </div>
+  );
+
   return (
     <div className="p-10">
-      <ColorsGrid />
+      <ThemeGrid />
       <div className="grid grid-cols-3 gap-4 mt-4">
+        <TabsGrid />
+        <CardGrid />
         <AccordionGrid />
         <ButtonGrid />
         <AlertDialogGrid />
+        <BreadCrumbGrid />
         <CarouselGrid />
         <VerticalCarouselGrid />
         <MultipleCarouselGrid />
-        <BreadCrumbGrid />
-        <ComboboxGrid />
-        <DropdownGrid />
-        <FormGrid />
-        <CardGrid />
         <BadgeGrid />
         <TooltipGrid />
-        <TabsGrid />
+        <FormGrid />
+        <TextareaGrid />
+        <InpuGrid />
+        <SelectGrid />
+        <ComboboxGrid />
+        <DropdownGrid />
       </div>
     </div>
   );
