@@ -7,9 +7,12 @@ import { Button } from "@/components/ui/button";
 import { CardDemo } from "@/components/ui/card/CardDemo";
 import { CarouselDemo } from "@/components/ui/carousel/CarouselDemo";
 import { ComboboxDemo } from "@/components/ui/combobox/ComboboxDemo";
+import { ComboboxForm } from "@/components/ui/combobox/ComboboxForm";
 import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/DropdownMenuDemo";
 import { FormDemo } from "@/components/ui/form/FormDemo";
+import { Input } from "@/components/ui/input";
 import { InputDemo } from "@/components/ui/input/InputDemo";
+import { InputForm } from "@/components/ui/input/InputForm";
 import { SelectDemo } from "@/components/ui/select/SelectDemo";
 import { TabsDemo } from "@/components/ui/tabs/TabsDemo";
 import { TextareaDemo } from "@/components/ui/textarea/TextareaDemo";
@@ -218,6 +221,7 @@ const DemoPage = () => {
       <div className="border rounded-xl p-4">
         <h2 className="text-2xl font-bold mb-5">Combobox</h2>
         <ComboboxDemo />
+        <ComboboxForm />
       </div>
     );
   };
@@ -235,7 +239,10 @@ const DemoPage = () => {
     return (
       <div className="border rounded-xl p-4">
         <h2 className="text-2xl font-bold mb-5">Input</h2>
-        <InputDemo />
+        <div className="flex flex-col gap-5">
+          <InputDemo />
+          <InputForm />
+        </div>
       </div>
     );
   };
