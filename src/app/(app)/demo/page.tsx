@@ -10,7 +10,6 @@ import { ComboboxDemo } from "@/components/ui/combobox/ComboboxDemo";
 import { ComboboxForm } from "@/components/ui/combobox/ComboboxForm";
 import { DropdownMenuDemo } from "@/components/ui/dropdown-menu/DropdownMenuDemo";
 import { FormDemo } from "@/components/ui/form/FormDemo";
-import { Input } from "@/components/ui/input";
 import { InputDemo } from "@/components/ui/input/InputDemo";
 import { InputForm } from "@/components/ui/input/InputForm";
 import { SelectDemo } from "@/components/ui/select/SelectDemo";

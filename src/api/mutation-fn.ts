@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
-import { AxiosError, AxiosResponse } from "axios";
+import { AxiosError, type AxiosResponse } from "axios";
 import { axiosInstance } from "./axiosInstance";
-import { TBaseResponse } from "@/types/response";
+import type { TBaseResponse } from "@/types/response";
 
 type Props = {
   url: string;
@@ -16,7 +16,7 @@ export function MutationFn({ url }: Props) {
           url,
           data,
         });
-        return response;
+        return response.data;
       } catch (err) {
         const error = err as AxiosError<TBaseResponse<unknown>>;
         throw error;
