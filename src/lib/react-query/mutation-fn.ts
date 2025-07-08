@@ -1,7 +1,7 @@
+import { TBaseResponse } from "@/types/response";
 import { useMutation } from "@tanstack/react-query";
-import { AxiosError, type AxiosResponse } from "axios";
-import { axiosInstance } from "./axiosInstance";
-import type { TBaseResponse } from "@/types/response";
+import { AxiosError, AxiosResponse } from "axios";
+import { axiosInstance } from "../axiosInstance";
 
 type Props = {
   url: string;
