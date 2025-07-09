@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "در روجابوم می‌توانید اقامتی دل‌انگیز و به‌یادماندنی را در ویلاها و سوئیت‌های مجهز تجربه کنید. رزرو آنلاین آسان، قیمت‌های شفاف و خدمات ویژه.",
   icons: {
-    icon: "/logo.jpg",
+    icon: "/logo.png",
   },
   openGraph: {
     locale: "fa_IR",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     images: [
       {
-        url: `${baseUrl}/logo.jpg`,
+        url: `${baseUrl}/logo.png`,
         width: 1200,
         height: 630,
       },
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html dir="rtl" lang="fa" suppressHydrationWarning>
       <body className={`${alibaba.className}`}>
         <QueryProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
